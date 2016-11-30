@@ -19,6 +19,14 @@
     </head>
     <body>
         {{ template "_internal/google_analytics.html" . }}
+        <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-583cd7d5c481901f"></script>
+        <div style="display:flex;justify-content:center;align-items:center;padding-top: 1cm;">
+                    <div>
+                        <a class="site-logo" title=".Site.Title" href="{{ .Site.BaseURL }}}">
+                            <img src="/logo.png" alt="The Team" align="middle"/>
+                        </a>
+                    </div>
+                </div>
 
         <div id="wrapper">
             <header class="site-header">
@@ -62,6 +70,11 @@
                         {{ with .Site.Params.gplus }}
                             <a class="button-square button-social hint--top" data-hint="Google+" title="Google+" href="{{ . }}">
                                 <i class="fa fa-google-plus"></i>
+                            </a>
+                        {{ end }}
+                        {{ with .Site.Params.youtube }}
+                            <a class="button-square button-social hint--top" data-hint="YouTube" title="YouTube" href="{{ . }}">
+                                <i class="fa fa-youtube"></i>
                             </a>
                         {{ end }}
                     </div>
